@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  @theme {
+    /* ====== PRIMARY BRAND COLORS ====== */
+    --color-primary: #556b2f; /* buttons, heaadings, primary text, links */
+    --color-secondary: #8fa31e; /* secondary buttons, hover */
+    --color-neutral: #c6d870; /* border, input bg */
+    --color-muted: #f4fcce; /* page bg, cards,  forms */
+  }
+}
+
+@layer utilities {
+  .underline-slide {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .underline-slide::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-neutral);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+    will-change: transform;
+  }
+
+  .underline-slide:hover::before {
+    transform: scaleX(1);
+  }
+
+  .services-fadein {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeSlideInRight 1s ease forwards;
+  }
+
+  @keyframes fadeSlideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .sb {
+    overflow-y: auto;
+  }
+
+  .sb::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  .sb::-webkit-scrollbar-track {
+    background-color: var(--color-neutral);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .sb::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 16px;
+  }
+}
