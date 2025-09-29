@@ -14,13 +14,14 @@
   </head>
   <body class="h-full">
     <div class="h-full">
+      <!-- Navbar -->
       <div
-        class="flex justify-between fixed top-0 w-full items-center h-16 p-6 bg-primary z-10"
+        class="flex justify-between fixed top-0 w-full items-center h-16 px-4 bg-primary z-10"
       >
-        <div class="text-4xl font-bold">furanshisu</div>
-        <div class="flex items-center space-x-6">
-          <nav>
-            <ul class="flex space-x-6">
+        <div class="text-2xl font-bold">furanshisu</div>
+        <div class="flex items-center space-x-4">
+          <nav class="hidden sm:block">
+            <ul class="flex space-x-4">
               <li>
                 <a href="#about" class="text-neutral underline-slide"
                   >About me</a
@@ -41,92 +42,105 @@
           <button class="px-3 py-1 rounded transition">Theme</button>
         </div>
       </div>
+
+      <!-- Main content -->
       <main class="h-full">
+        <!-- hero section -->
         <section
           id="hero"
-          class="min-h-screen flex justify-between p-24 mt-8 bg-muted"
+          class="min-h-screen flex flex-col-reverse gap-12 px-4 pt-28 pb-12 bg-muted md:flex-row md:justify-between md:items-center md:px-12 lg:px-24"
         >
-          <div class="flex flex-1 max-w-7xl justify-between items-center">
-            <!-- Left Column -->
-            <div class="w-3/6 flex flex-col items-start">
-              <span
-                class="text-2xl font-semibold uppercase tracking-wide text-secondary mb-4"
-                >Hi, I'm Francis</span
+          <div class="flex flex-col w-full md:w-1/2">
+            <span
+              class="text-base font-semibold uppercase tracking-wide text-secondary mb-2"
+            >
+              Hi, I'm Francis
+            </span>
+            <h1
+              class="text-4xl font-bold txt-nd mb-4 text-primary leading-tight md:text-5xl lg:text-6xl"
+            >
+              CS Student | Software Engineer
+            </h1>
+            <p
+              class="mt-4 text-base text-primary leading-relaxed font-medium md:text-lg"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              eius quasi odio fuga? Sed dolor ducimus repudiandae id? Est dolor
+              incidunt dolorum at eos tempora corrupti, asperiores doloribus
+              deserunt velit?
+            </p>
+
+            <!-- Buttons & socials -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-6 mt-6">
+              <div
+                class="flex justify-center space-x-4 bg-primary px-4 py-3 rounded shadow-md shadow-black"
               >
-              <h1 class="text-6xl font-bold txt-nd mb-4 text-primary">
-                CS Student | Software Engineer
-              </h1>
-              <p class="mt-6 text-primary leading-8 font-medium">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt eius quasi odio fuga? Sed dolor ducimus repudiandae id?
-                Est dolor incidunt dolorum at eos tempora corrupti, asperiores
-                doloribus deserunt velit?
-              </p>
-              <div class="flex items-center gap-6 mt-8">
-                <div
-                  class="flex space-x-6 bg-primary px-5 py-3 rounded shadow-md shadow-black"
-                >
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    class="transform transition-transform hover:scale-110"
-                  >
-                    <img src="/linkedin.svg" alt="LinkedIn" class="h-7 w-7" />
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    class="transform transition-transform hover:scale-110"
-                  >
-                    <img src="/github.svg" alt="GitHub" class="h-7 w-7" />
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Email"
-                    class="transform transition-transform hover:scale-110"
-                  >
-                    <img src="/email.svg" alt="Email" class="h-7 w-7" />
-                  </a>
-                </div>
                 <a
-                  href="#projects"
-                  class="bg-primary text-white px-6 py-3 rounded shadow-md shadow-black font-semibold hover:bg-secondary transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  class="transform transition-transform hover:scale-110"
                 >
-                  View Projects &rarr;
+                  <img src="/linkedin.svg" alt="LinkedIn" class="h-6 w-6" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  class="transform transition-transform hover:scale-110"
+                >
+                  <img src="/github.svg" alt="GitHub" class="h-6 w-6" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Email"
+                  class="transform transition-transform hover:scale-110"
+                >
+                  <img src="/email.svg" alt="Email" class="h-6 w-6" />
                 </a>
               </div>
-            </div>
 
-            <!-- Right Column -->
-            <div class="flex border-2">
-              <img
-                src=""
-                alt="Profile"
-                class="w-80 h-80 object-cover rounded-xl shadow-black shadow-lg"
-              />
+              <a
+                href="#projects"
+                class="bg-primary text-white text-sm px-6 py-3 rounded shadow-md shadow-black font-semibold hover:bg-secondary transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
+              >
+                View Projects &rarr;
+              </a>
             </div>
           </div>
+
+          <!-- Profile Image -->
+          <div class="w-full flex justify-center md:w-auto">
+            <img
+              src=""
+              alt="Profile"
+              class="w-52 h-52 object-cover rounded-xl shadow-black shadow-lg sm:w-64 sm:h-64 lg:w-80 lg:h-80"
+            />
+          </div>
         </section>
+
+        <!-- about section -->
         <section
           id="about"
-          class="py-24 bg-muted flex justify-center items-center"
+          class="py-24 px-4 bg-muted flex justify-center items-center"
         >
           <div
-            class="w-10/12 max-w-5xl bg-neutral p-10 rounded-xl shadow-lg space-y-10"
+            class="w-full max-w-3xl bg-neutral p-6 sm:p-8 md:p-10 rounded-xl shadow-lg space-y-6"
           >
             <h2
-              class="text-4xl font-bold text-primary border-b-2 border-secondary pb-4"
+              class="text-3xl sm:text-4xl font-bold text-primary border-b-2 border-secondary pb-4"
             >
               About Me
             </h2>
 
-            <div class="flex items-start space-x-4">
-              <span class="text-4xl">👨‍💻</span>
-              <p class="text-primary text-lg leading-relaxed">
+            <!-- Item 1 -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-start sm:space-x-4 space-y-2 sm:space-y-0"
+            >
+              <span class="text-3xl sm:text-4xl">👨‍💻</span>
+              <p class="text-primary text-base sm:text-lg leading-relaxed">
                 I'm currently a
                 <span class="font-semibold text-secondary"
                   >Computer Science student</span
@@ -140,9 +154,12 @@
               </p>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <span class="text-4xl">🛠️</span>
-              <p class="text-primary text-lg leading-relaxed">
+            <!-- Item 2 -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-start sm:space-x-4 space-y-2 sm:space-y-0"
+            >
+              <span class="text-3xl sm:text-4xl">🛠️</span>
+              <p class="text-primary text-base sm:text-lg leading-relaxed">
                 My toolbox includes
                 <span class="font-semibold text-secondary">Python</span>,
                 <span class="font-semibold text-secondary">JavaScript</span>,
@@ -153,9 +170,12 @@
               </p>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <span class="text-4xl">⚙️</span>
-              <p class="text-primary text-lg leading-relaxed">
+            <!-- Item 3 -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-start sm:space-x-4 space-y-2 sm:space-y-0"
+            >
+              <span class="text-3xl sm:text-4xl">⚙️</span>
+              <p class="text-primary text-base sm:text-lg leading-relaxed">
                 I'm particularly interested in backend development, APIs, and
                 building
                 <span class="font-semibold text-secondary"
@@ -165,9 +185,12 @@
               </p>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <span class="text-4xl">📬</span>
-              <p class="text-primary text-lg leading-relaxed">
+            <!-- Item 4 -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-start sm:space-x-4 space-y-2 sm:space-y-0"
+            >
+              <span class="text-3xl sm:text-4xl">📬</span>
+              <p class="text-primary text-base sm:text-lg leading-relaxed">
                 I'm currently seeking
                 <span class="font-semibold text-secondary">internships</span>
                 or
@@ -181,18 +204,24 @@
           </div>
         </section>
 
+        <!-- services section-->
         <section
           id="services"
-          class="h-full bg-muted flex items-center justify-center"
+          class="py-32 px-4 bg-muted flex items-center justify-center"
         >
           <div
-            class="grid h-8/12 w-full grid-cols-3 gap-4 bg-neutral py-8 px-48"
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl bg-neutral p-6 sm:p-10 md:p-12 rounded-xl"
           >
+            <!-- Tech Stack -->
             <div
-              class="flex flex-col p-8 rounded-xl bg-muted shadow-md shadow-gray-500 overflow-y-auto"
+              class="flex flex-col p-6 rounded-xl bg-muted shadow-md shadow-gray-500 overflow-hidden"
             >
-              <h2 class="text-3xl font-bold text-primary mb-6">Tech Stack</h2>
-              <div class="flex flex-wrap overflow-y-auto gap-4 fade-bottom sb">
+              <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-6">
+                Tech Stack
+              </h2>
+              <div
+                class="flex flex-wrap gap-4 sm:gap-2 overflow-y-auto max-h-64 mask-b-from-95% sb pr-2"
+              >
                 <div
                   class="h-20 w-20 rounded-md bg-primary shadow-md shadow-gray-500"
                 ></div>
@@ -231,14 +260,18 @@
                 ></div>
               </div>
             </div>
+
+            <!-- Services -->
             <div
-              class="col-span-2 bg-muted p-8 rounded-xl shadow-md shadow-gray-500"
+              class="md:col-span-2 bg-muted p-6 rounded-xl shadow-md shadow-gray-500"
             >
-              <h2 class="text-3xl font-bold text-primary mb-6 services-fadein">
+              <h2
+                class="text-2xl sm:text-3xl font-bold text-primary mb-6 services-fadein"
+              >
                 Services
               </h2>
               <ul
-                class="space-y-4 text-primary font-medium list-disc list-inside services-fadein"
+                class="space-y-4 text-primary font-medium list-disc list-inside services-fadein text-base sm:text-lg"
               >
                 <li>
                   Web development with React and Tailwind CSS, building
@@ -256,30 +289,37 @@
             </div>
           </div>
         </section>
-        <section id="projects" class="h-full bg-muted p-32">
-          <div class="p-8">
+
+        <!-- project section -->
+        <section
+          id="projects"
+          class="bg-muted py-16 px-4 sm:px-6 md:px-12 md:h-full md:py-28"
+        >
+          <div class="max-w-7xl mx-auto">
             <h2
-              class="text-4xl font-bold text-primary border-b-2 border-secondary pb-4 mb-8"
+              class="text-3xl sm:text-4xl font-bold text-primary border-b-2 border-secondary pb-4 mb-8"
             >
               Projects
             </h2>
+
             <div class="overflow-x-auto">
-              <div class="flex gap-4 sb mask-r-from-95% p-4">
+              <div
+                class="flex gap-4 sm:gap-6 md:gap-8 p-8 sm:p-4 mask-r-from-95% sb"
+              >
+                <!-- Project Card -->
                 <div
-                  class="bg-neutral p-6 rounded-lg shadow-lg shadow-gray-500 mb-8 hover:grow cursor-pointer duration-300"
+                  class="min-w-[280px] max-w-xs flex-shrink-0 bg-neutral p-6 rounded-lg shadow-lg shadow-gray-500 flex flex-col hover:scale-[1.02] transition-transform duration-300"
                 >
                   <img
                     src=""
                     alt="Project 1"
-                    class="rounded-mb mb-4 object-cover h-28 w-full"
+                    class="rounded mb-4 object-cover h-28 w-full"
                   />
-                  <h3 class="text-2xl font-semibold text-primary mb-2">
-                    Title
-                  </h3>
+                  <h3 class="text-xl font-semibold text-primary mb-2">Title</h3>
                   <p class="text-primary mb-4">
-                    short description of the project
+                    Short description of the project
                   </p>
-                  <div class="flex gap-2 mb-4">
+                  <div class="flex flex-wrap gap-2 mb-4">
                     <span
                       class="text-sm bg-secondary text-white px-2 py-1 rounded"
                       >React</span
@@ -290,43 +330,36 @@
                     >
                     <span
                       class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >MySql</span
+                      >MySQL</span
                     >
                   </div>
                   <div class="mt-auto flex gap-4">
                     <a
                       href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
+                      >Live Site</a
                     >
-                      Live Site
-                    </a>
                     <a
                       href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
+                      >GitHub</a
                     >
-                      GitHub
-                    </a>
                   </div>
                 </div>
+
                 <div
-                  class="bg-neutral p-6 rounded-lg shadow-lg shadow-gray-500 mb-8 hover:grow cursor-pointer duration-300"
+                  class="min-w-[280px] max-w-xs flex-shrink-0 bg-neutral p-6 rounded-lg shadow-lg shadow-gray-500 flex flex-col hover:scale-[1.02] transition-transform duration-300"
                 >
                   <img
                     src=""
                     alt="Project 1"
-                    class="rounded-mb mb-4 object-cover h-28 w-full"
+                    class="rounded mb-4 object-cover h-28 w-full"
                   />
-                  <h3 class="text-2xl font-semibold text-primary mb-2">
-                    Title
-                  </h3>
+                  <h3 class="text-xl font-semibold text-primary mb-2">Title</h3>
                   <p class="text-primary mb-4">
-                    short description of the project
+                    Short description of the project
                   </p>
-                  <div class="flex gap-2 mb-4">
+                  <div class="flex flex-wrap gap-2 mb-4">
                     <span
                       class="text-sm bg-secondary text-white px-2 py-1 rounded"
                       >React</span
@@ -337,120 +370,20 @@
                     >
                     <span
                       class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >MySql</span
+                      >MySQL</span
                     >
                   </div>
                   <div class="mt-auto flex gap-4">
                     <a
                       href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
+                      >Live Site</a
                     >
-                      Live Site
-                    </a>
                     <a
                       href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
+                      >GitHub</a
                     >
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="bg-neutral p-6 rounded-lg shadow-lg shadow-gray-500 mb-8 hover:grow duration-300"
-                >
-                  <img
-                    src=""
-                    alt="Project 1"
-                    class="rounded-mb mb-4 object-cover h-28 w-full"
-                  />
-                  <h3 class="text-2xl font-semibold text-primary mb-2">
-                    Title
-                  </h3>
-                  <p class="text-primary mb-4">
-                    short description of the project
-                  </p>
-                  <div class="flex gap-2 mb-4">
-                    <span
-                      class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >React</span
-                    >
-                    <span
-                      class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >Tailwind</span
-                    >
-                    <span
-                      class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >MySql</span
-                    >
-                  </div>
-                  <div class="mt-auto flex gap-4">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
-                    >
-                      Live Site
-                    </a>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
-                    >
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="bg-neutral p-6 rounded-lg shadow-lg shadow-gray-500 mb-8 hover:grow duration-300"
-                >
-                  <img
-                    src=""
-                    alt="Project 1"
-                    class="rounded-mb mb-4 object-cover h-28 w-full"
-                  />
-                  <h3 class="text-2xl font-semibold text-primary mb-2">
-                    Title
-                  </h3>
-                  <p class="text-primary mb-4">
-                    short description of the project
-                  </p>
-                  <div class="flex gap-2 mb-4">
-                    <span
-                      class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >React</span
-                    >
-                    <span
-                      class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >Tailwind</span
-                    >
-                    <span
-                      class="text-sm bg-secondary text-white px-2 py-1 rounded"
-                      >MySql</span
-                    >
-                  </div>
-                  <div class="mt-auto flex gap-4">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
-                    >
-                      Live Site
-                    </a>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-sm text-white bg-primary px-4 py-2 rounded hover:bg-secondary transition"
-                    >
-                      GitHub
-                    </a>
                   </div>
                 </div>
               </div>
